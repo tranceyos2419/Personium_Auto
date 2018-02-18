@@ -4,9 +4,9 @@ var cellUrl = "https://demo.personium.io/u-aizu-100",
   appUrl = "https://demo.personium.io/app-aizu-health-store/".
 
 //making engineEndoPoint
-getEngineEndPoint = function() {
-    return appUrl + "__/html/Engine/getAppAuthToken";
-};
+// getEngineEndPoint = function() {
+//     return appUrl + "__/html/Engine/getAppAuthToken";
+// };
 
 
 getAppAuthToken = function(cellUrl) {
@@ -17,8 +17,7 @@ getAppAuthToken = function(cellUrl) {
                 p_target: cellUrl
         },
         headers: {
-          'Accept':'application/json',
-          'x-personium-cors':'true'
+          'Accept':'application/json'.
       }
 
     });
@@ -37,20 +36,11 @@ getProtectedBoxAccessToken = function(appToken, cellUrl) {
                     client_secret: appToken
                 },
                 headers: {
-                  'Accept':'application/json',
-                  'x-personium-cors':'true'
+                  'Accept':'application/json'.
               }
             });
 };
 
-//Imprementation 01
-// $('button').click(function(){
-//     getAppAuthToken(cellUrl)
-//         .done(function(data){
-//             // console.log(data.access_token);
-//             console.log(data)
-//         });
-// });
 
 //Imprementation 02
 $('button').click(function(){
@@ -62,8 +52,16 @@ $('button').click(function(){
         });
 });
 
+//Imprementation 01
+// $('button').click(function(){
+//     getAppAuthToken(cellUrl)
+//         .done(function(data){
+//             // console.log(data.access_token);
+//             console.log(data)
+//         });
+// });
 /*
 1. capture and post current error
 2. push to github
-3. ask that refresh_token in getProtectedBoxAccessToken is determined updateSessionStorage which is in callback of getProtectedBoxAccessToken
+3. refresh_token in getProtectedBoxAccessToken is determined updateSessionStorage which is in callback of getProtectedBoxAccessToken
 */
