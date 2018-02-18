@@ -60,8 +60,3 @@ $('button').click(function(){
 //             console.log(data)
 //         });
 // });
-/*
-1. capture and post current error
-2. push to github
-3. refresh_token in getProtectedBoxAccessToken is determined updateSessionStorage which is in callback of getProtectedBoxAccessToken
-*/
